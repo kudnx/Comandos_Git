@@ -7,6 +7,5 @@ git config credential.helper store
 //atualiza um repositorio a partir de uma branch
 git pull nome-do-repositorio nome-da-branch
 
-//voltar arquivos modificados ao estado original
-git checkout -- .                   --volta todos os arquivos modificados
-git checkout nome-do-arquivo        --volta somente um arquivo
+//voltar todos os arquivos modificados ao estado original
+git checkout -- .
