@@ -1,0 +1,48 @@
+//mostra as branchs existentes no projeto
+git branch
+
+//criação de uma branch no git
+git branch nome-da-branch
+
+//mudar para uma outra branch
+git checkout nome-da-branch
+
+//comando para a criação e mudança para uma nova branch
+git checkout -b nome-da-branch
+
+//deletar uma branch
+git branch -d nome-da-branch        --caso já tenha sido feito o merge da branch
+git branch -D nome-da-branch        --caso ainda não tenha sido feito o merge da branch
+
+//fazer o merge entre duas branchs 
+1)primeiramente ir para a branch que você quer que ela seja incrementada com as novas atualizações
+git merge nome-da-branch-que-será-adicionada
+
+//fazer um rebase
+git rebase nome-da-branch
+
+//clonar um repositorio git
+git clone caminho-do-repositorio caminho-da-pasta-onde-sera-clonado
+
+//atualizar um repositorio git com mudanças locais
+git push
+
+//O fetch baixa os arquivos de um repositorio mas não faz um merge, permitindo assim fazer rebase
+git fetch           --baixa os arquivos na maquina local
+git rebase          --faz o merge dos arquivos clonados
+
+//Baixa os arquivos e faz o merge
+git pull
+
+//criação de uma repositorio bare localmente
+git init --bare
+
+//criação de uma tag em um projeto
+git tag nome-da-tag
+
+//ver as tags cadatradas no projeto
+git tag
+
+//submetendo a tag para o repositorio remoto
+git push nome-da-branch-remota nome-da-tag
+

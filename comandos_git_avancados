@@ -1,0 +1,8 @@
+//verifica se há algum repositório remoto registrado
+git remote -v
+
+//salva o usuário e senha  para autenticação no git
+git config credential.helper store
+
+//atualiza um repositorio a partir de uma branch
+git pull nome-do-repositorio nome-da-branch

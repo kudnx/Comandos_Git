@@ -1,0 +1,76 @@
+//configurando de forma local, em um repositorio específico
+git config user.name  "nome do criador do repositório"
+git config user.email "email de contato do criador do repositório"
+
+//configurando de forma global, para todos os repositórios criados na maquina
+git config --global user.name "nome do criador do repositório"
+git config --global user.email "email de contato do criador do repositório"
+
+
+//adicionando um arquivo ao rastreamento do git
+git add nome-do-arquivo             --adiciona um arquivo 
+git add *                           --adiciona todos os arquivos não rastreados
+
+//commmitando arquivos
+git commmit -m "mensagem de commmit"
+
+//acessa o historico dos commits realizados
+git log
+
+//acessa os ultimos dois logs de commits realizados
+git log -2
+
+//mostra somente uma unica linha dos commit realizados
+git log --oneline
+
+//mostra os commits realizados de acordo com uma certa data
+git log --before="2021-05-16"       --commits realizados anteriomente a essa data
+git log --after="2021-05-16"        --commits realizados posteriormente a essa data
+
+//mostra os commits que ocorreram a partir de um certo timestamp
+git log --since="2 days ago"        --mostra os commits ocorridos a dois dias atras
+git log --since="one week ago"      --mostra os commits ocorridos na ultima semana
+
+//mostra os commits de acordo com o autor
+got log --author="kud"
+
+//força o git a mostrar todo o historico de commits no terminal
+git config core.pager cat               --localmente no projeto
+git config --global core.pager cat      --globalmente na máquina
+
+//voltar para um commit especifico
+git checkout hash-do-commit
+
+//voltar ao commit principal
+git checkout master
+
+//renomear aquivos com git
+git mv nome-antigo-do-arquivo novo-nome-do-arquivo
+
+//remove arquivos do git
+git rm nome-do-arquivo
+
+//compara a ultima versão do arquivo com o ultimo commit realizado
+git diff --staged
+
+//compara a ultima versao do arquivo com um commit específico
+git diff hash-do-commit
+
+//corrigir texto de commit escrito errado
+git commit --amend -m "texto do commit"
+
+//adiciona um novo arquivo ao commit anterior ou atualiza um arquivo anteriormente commitado
+git commit --amend -m "mensqgem de commit"
+
+//retirar um arquivo do estado de pronto para ser commitado
+git restore --staged nome-do-arquivo
+
+//voltando um arquivo ao seu estado original(ultimo commit)
+git checkout nome-do-arquivo        
+
+//volta o projeto para um estágio anterior(sem alterações) 
+git reset HEAD --hard
+
+//reseta o utlimo commit
+git reset HEAD^ --hard
+
