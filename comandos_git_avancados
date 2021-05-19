@@ -10,3 +10,16 @@ git pull nome-do-repositorio nome-da-branch
 //voltar arquivos modificados ao estado original
 git checkout -- .                   --volta todos os arquivos modificados
 git checkout nome-do-arquivo        --volta somente um arquivo
+
+//voltar arquivos modificados ao estado original depois de adicionados para commit
+git checkout HEAD --.                       --volta todos os arquivos modificados 
+git checkout HEAD -- nome-do-arquivo        --volta somente um arquivo
+
+//faz um novo commit revertendo as alterações do commit anterior, mantém o historico de commits
+git revert numero-do-commit-a-ser-revertido
+
+//defaz os commits realizados
+git reset HEAD~1             --o número é a quantidade de commits a serem revertidos
+
+//Fechar uma issue automaticamente ao fazer um push no github
+mensagem-do-commit. Closes #1           --1 é o número do problema a ser fechado.
